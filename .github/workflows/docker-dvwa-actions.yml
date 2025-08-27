@@ -15,7 +15,8 @@ jobs:
           - 8080:80
     steps:
       - name: Check if running
-        run: | # | denotes that this is a multiple line string
+       # | denotes that this is a multiple line string
+        run: |
           curl http://localhost:8080
     # - name: Pull latest DVWA Image
     #   run: docker pull vulnerables/web-dvwa
