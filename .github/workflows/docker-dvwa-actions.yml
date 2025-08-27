@@ -16,8 +16,9 @@ jobs:
     steps:
       - name: Check if running
        # | denotes that this is a multiple line string
-        run: |
-          curl http://localhost:8080
+        run: ping localhost:8080
+         # curl http://localhost:8080
+         
     # - name: Pull latest DVWA Image
     #   run: docker pull vulnerables/web-dvwa
     # - name: Run Docker Container
