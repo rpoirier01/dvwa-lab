@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Pull latest DVWA Image
       run: docker pull vulnerables/web-dvwa
-    - name: Run Docker Container
-      run: docker run --rm -it -p 80:80 vulnerables/web-dvwa
+    # - name: Run Docker Container
+    #   run: docker run --rm -it -p 80:80 vulnerables/web-dvwa
