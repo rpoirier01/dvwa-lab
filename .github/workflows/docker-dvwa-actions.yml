@@ -15,19 +15,28 @@ jobs:
         image: vulnerables/web-dvwa
         ports:
           - 8080:80
-  vulnerability-scanner:
-    runs-on: ubuntu-latest
-      docker run aquasec/trivy
-  
-      
     steps:
-      - name: Check if running
+      - name: Check if running correctly
        # | denotes that this is a multiple line string
         run: | #ping http://localhost:8080
          docker ps -a
          sleep 5
          curl -v http://localhost:8080
-         trivy image vulnerables/web-dvwa
+  vulnerability-scanner:
+    #needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+          docker run aquasec/trivy
+          sleep 5
+          trivy image vulnerables/web-dvwa
+          
+    
+      
+      
+
+         
+         #trivy image vulnerables/web-dvwa
        #changed to port 80
          
     # - name: Pull latest DVWA Image
