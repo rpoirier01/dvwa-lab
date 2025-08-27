@@ -18,9 +18,10 @@ jobs:
     steps:
       - name: Check if running
        # | denotes that this is a multiple line string
-        run: ping http://localhost:8080
-         # docker ps -a
-         # curl -v http://localhost:80
+        run: | #ping http://localhost:8080
+         docker ps -a
+         sleep 1s
+         curl -v http://localhost:80
        #changed to port 80
          
     # - name: Pull latest DVWA Image
