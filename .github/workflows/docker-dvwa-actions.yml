@@ -4,11 +4,20 @@ on:
   schedule:
     # Run every 10 minutes, just for testing
     - cron: "*/10 * * * *"
+#ChatGPT gave me this code, though I 
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      web-app:
+        image: vulnerables/web-dvwa
+        ports:
+          8080
     steps:
-    - name: Pull latest DVWA Image
-      run: docker pull vulnerables/web-dvwa
+      - name: Check if running
+        run: | # | denotes that this is a multiple line string
+          curl http://localhost:8080
+    # - name: Pull latest DVWA Image
+    #   run: docker pull vulnerables/web-dvwa
     # - name: Run Docker Container
     #   run: docker run --rm -it -p 80:80 vulnerables/web-dvwa
