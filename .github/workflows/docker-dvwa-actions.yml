@@ -12,7 +12,7 @@ jobs:
       web-app:
         image: vulnerables/web-dvwa
         ports:
-          8080
+          - 8080:80
     steps:
       - name: Check if running
         run: | # | denotes that this is a multiple line string
