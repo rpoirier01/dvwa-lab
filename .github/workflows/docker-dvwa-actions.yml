@@ -17,7 +17,8 @@ jobs:
       - name: Check if running
        # | denotes that this is a multiple line string
         run: | #ping localhost:8080
-         curl http://localhost:80
+         docker ps -a
+         curl http://localhost:8080
        #changed to port 80
          
     # - name: Pull latest DVWA Image
