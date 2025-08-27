@@ -4,7 +4,7 @@ on:
   schedule:
     # Run every 10 minutes, just for testing
     - cron: "*/10 * * * *"
-#ChatGPT gave me this code, though I 
+#ChatGPT gave me this code
 jobs:
   build:
     runs-on: ubuntu-latest
