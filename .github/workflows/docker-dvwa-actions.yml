@@ -1,9 +1,11 @@
 name: Pull Docker Image
 
 on:
-  schedule:
-    # Run every 10 minutes, just for testing
-    - cron: "*/10 * * * *"
+  workflow_dispatch
+  # schedule:
+  #   # Run every 10 minutes, just for testing
+  #   - cron: "*/10 * * * *"
+
 #ChatGPT gave me this code
 jobs:
   build:
