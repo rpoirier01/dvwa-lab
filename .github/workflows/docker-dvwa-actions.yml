@@ -22,16 +22,19 @@ jobs:
          docker ps -a
          sleep 5
          curl -v http://localhost:8080
+         
   vulnerability-scanner:
     #needs: build
     runs-on: ubuntu-latest
+    container:
+      image: aquasec/trivy
     steps:
-      - with:
-          image: aquasec/trivy
-          run: | 
-              docker exec trivy fs .
+      # - with:
+      #     image: aquasec/trivy
+       - run: | 
+            docker exec trivy fs .
               
-          # docker run aquasec/trivy
+      # docker run aquasec/trivy
          
           
       # docker exec aquasec/trivy fs . 
