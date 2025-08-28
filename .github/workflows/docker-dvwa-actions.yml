@@ -28,8 +28,9 @@ jobs:
     steps:
       - run: | 
           docker run aquasec/trivy
-    #sleep 5
           trivy fs .
+    #sleep 5
+
     #trivy image vulnerables/web-dvwa
           
     
