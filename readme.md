@@ -2,13 +2,13 @@
 
 This is a hands-on lab I completed in which I pentested a containerized version of the Damn Vulnerable Web App (DVWA). In addition to the pentesting, I created Prometheus alerts for visibility
 and I built a basic Grafana dashboard to build familiarity with the technology. I also set up a simple CI/CD pipeline to perform a vulnerability scan of the DVWA Docker image, and then pull it.
-
+For more detailed information, please see **WRITEUP.md**.
 ## Disclaimer
 Some tools in this lab have the potential to be used maliciously. The OWASP ZAP vulnerability scanner was run exclusively on a web application locally hosted on my machine. I did not scan any 3rd party systems, and I do not condone any unethical use of OWASP ZAP or any other pentesting tool. While I may discuss different types of attacks and their methodology, I am only supplying information readily available on cybersecurity sites like OWASP. I do not intend to encourage any type of illegal or unethical cyberattack, this project was purely for personal learning. 
 
 ## Note On AI Use
 Some of the results in this lab were the result of AI assisted research and troubleshooting along with AI generated code. I tried to do as much of this lab hands-on as possible, but I still 
-relied on AI when I ran into issues. For full details of AI usage, see the WRITEUP.md file, as I tried to note them specifically there. 
+relied on AI when I ran into issues. For full details of AI usage, see the **WRITEUP.md** file, as I tried to note them specifically there. 
 
 ## Tools Used
 - Damn Vulnerable Web App (DVWA) - A web app which has intentional security vulnerabilities. It features different levels of security to learn pentesting. 
