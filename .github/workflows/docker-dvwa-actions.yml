@@ -28,7 +28,9 @@ jobs:
     steps:
       - run: | 
           docker run aquasec/trivy
-          docker exec trivy fs .
+          docker ps -a
+          
+      # docker exec trivy fs .
           
           
       #docker run trivy fs .
