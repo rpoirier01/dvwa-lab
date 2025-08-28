@@ -32,7 +32,8 @@ jobs:
       # - with:
       #     image: aquasec/trivy
        - run: | 
-            docker exec trivy fs .
+           trivy fs .
+      # docker exec trivy fs .
               
       # docker run aquasec/trivy
          
