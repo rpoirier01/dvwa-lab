@@ -8,7 +8,8 @@ on:
 
 #ChatGPT gave me this code
 jobs:
-  build:
+  build-dvwa:
+    needs: vulnerability-scanner
     runs-on: ubuntu-latest
     services:
       web-app:
