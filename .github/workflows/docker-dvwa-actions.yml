@@ -32,7 +32,7 @@ jobs:
       # - with:
       #     image: aquasec/trivy
        - run: | 
-           trivy fs .
+           trivy image vulnerables/web-dvwa
       # docker exec trivy fs .
               
       # docker run aquasec/trivy
